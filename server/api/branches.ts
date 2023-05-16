@@ -7,7 +7,7 @@ async function getReleaseBranches () {
     auth: runtimeConfig.githubSecret
   })
 
-  console.log('runtimeconfig: ' + runtimeConfig.githubSecret)
+  // console.log('runtimeconfig: ' + runtimeConfig.githubSecret)
 
   let response = {}
 
@@ -25,7 +25,7 @@ async function getReleaseBranches () {
     console.log(e)
   }
 
-  console.log(response)
+  // console.log(response)
 
   return response
 }

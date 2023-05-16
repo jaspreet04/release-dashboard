@@ -13,6 +13,7 @@ async function getFileData (url: string) {
 }
 
 async function getVersion (branch: string) {
+  console.log('caliing version: ' + branch)
   const runtimeConfig = useRuntimeConfig()
 
   const octokit = new Octokit({
@@ -35,15 +36,13 @@ async function getVersion (branch: string) {
     console.log(e)
   }
 
-  // getFileData()
-
   return response
 }
 
 export default defineEventHandler(async (event) => {
   const branch = `${event.context.params.branch}`
   const response = await getVersion(branch)
-  const version = await getFileData(response.data.download_url)
+  const version = await getFileData(response?.data?.download_url)
 
   return {
     version
