@@ -1,7 +1,7 @@
 <template>
-  <div>
-      {{data}}
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <script setup>
