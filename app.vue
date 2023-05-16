@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h1 class="text-3xl underline">
-    Hello world!
-    </h1>
+      {{data}}
   </div>
 </template>
+
+<script setup>
+const { data } = await useFetch(() => `/api/jira/issues?version=app-5.17`)
+
+</script>
