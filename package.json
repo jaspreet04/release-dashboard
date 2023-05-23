@@ -16,7 +16,7 @@
     "tailwindcss": "^3.3.2"
   },
   "dependencies": {
-    "octokit": "^2.0.14"
+    "octokit": "^2.0.14",
     "@aws-sdk/client-codebuild": "^3.332.0"
   }
 }
